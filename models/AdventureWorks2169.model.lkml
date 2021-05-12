@@ -18,6 +18,10 @@ explore: ASAdventureSmall {
   label: "ASAdventureSmall"
 }
 
+explore: ASASDefaultMembers {
+  label: "ASASDefaultMembers"
+}
+
 explore: ResellerPerspective {
   label: "ResellerPerspective"
 }
