@@ -1,29 +1,17 @@
-view: ASAdventureSmall {
-  label: "ASAdventureSmall"
-  sql_table_name: "AdventureWorks_2169"."ASAdventureSmall";;
-
-  dimension: Account_Description {
-    label: "Account Description"
-    type: string
-    sql: ${TABLE}.`Account Description`;;
-  }
-
-  dimension: Account_Number {
-    label: "Account Number"
-    type: number
-    sql: ${TABLE}.`Account Number`;;
-  }
-
-  dimension: Account_Type {
-    label: "Account Type"
-    type: string
-    sql: ${TABLE}.`Account Type`;;
-  }
+view: ResellerPerspective {
+  label: "ResellerPerspective"
+  sql_table_name: "AdventureWorksDW2012Multidimensional-EE"."ResellerPerspective";;
 
   dimension: Business_Type2 {
     label: "Business Type2"
     type: string
     sql: ${TABLE}.`Business Type2`;;
+  }
+
+  dimension: Category2 {
+    label: "Category2"
+    type: string
+    sql: ${TABLE}.`Category2`;;
   }
 
   dimension: City3 {
@@ -36,13 +24,6 @@ view: ASAdventureSmall {
     label: "Country3"
     type: string
     sql: ${TABLE}.`Country3`;;
-  }
-
-  dimension: CustomerFullName {
-    label: "CustomerFullName"
-    description: "Customer Full Name distinguished by customer key"
-    type: string
-    sql: ${TABLE}.`CustomerFullName`;;
   }
 
   dimension: DateAttr {
@@ -876,12 +857,6 @@ view: ASAdventureSmall {
     sql: ${TABLE}.`Subcategory2`;;
   }
 
-  dimension: Value_Type {
-    label: "Value Type"
-    type: string
-    sql: ${TABLE}.`Value Type`;;
-  }
-
   dimension: Week_Of_Year {
     label: "Week Of Year"
     type: number
@@ -898,115 +873,6 @@ view: ASAdventureSmall {
     label: "Year2"
     type: string
     sql: ${TABLE}.`Year2`;;
-  }
-
-  dimension: Customer_Geography_Customer {
-    label: " Customer"
-    group_label: "Customer Geography"
-    type: string
-    sql: ${TABLE}.`Customer`;;
-  }
-
-  dimension: Customer_Geography_Customer_City {
-    label: "   Customer City"
-    group_label: "Customer Geography"
-    type: string
-    sql: ${TABLE}.`Customer City`;;
-    drill_fields: [Customer_Geography_Customer_Postal_Code]
-  }
-
-  dimension: Customer_Geography_Customer_Country {
-    label: "     Customer Country"
-    group_label: "Customer Geography"
-    type: string
-    sql: ${TABLE}.`Customer Country`;;
-    drill_fields: [Customer_Geography_Customer_State_Province]
-  }
-
-  dimension: Customer_Geography_Customer_Postal_Code {
-    label: "  Customer Postal Code"
-    group_label: "Customer Geography"
-    type: string
-    sql: ${TABLE}.`Customer Postal Code`;;
-    drill_fields: [Customer_Geography_Customer]
-  }
-
-  dimension: Customer_Geography_Customer_State_Province {
-    label: "    Customer State-Province"
-    group_label: "Customer Geography"
-    type: string
-    sql: ${TABLE}.`Customer State-Province`;;
-    drill_fields: [Customer_Geography_Customer_City]
-  }
-
-  dimension: Commute_Distance {
-    label: "Commute Distance"
-    group_label: "Demographic"
-    type: string
-    sql: ${TABLE}.`Commute Distance`;;
-  }
-
-  dimension: Education {
-    label: "Education"
-    group_label: "Demographic"
-    type: string
-    sql: ${TABLE}.`Education`;;
-  }
-
-  dimension: Gender {
-    label: "Gender"
-    group_label: "Demographic"
-    type: string
-    sql: ${TABLE}.`Gender`;;
-  }
-
-  dimension: Home_Owner {
-    label: "Home Owner"
-    group_label: "Demographic"
-    type: string
-    sql: ${TABLE}.`Home Owner`;;
-  }
-
-  dimension: Marital_Status {
-    label: "Marital Status"
-    group_label: "Demographic"
-    type: string
-    sql: ${TABLE}.`Marital Status`;;
-  }
-
-  dimension: Number_of_Cars_Owned {
-    label: "Number of Cars Owned"
-    group_label: "Demographic"
-    type: number
-    sql: ${TABLE}.`Number of Cars Owned`;;
-  }
-
-  dimension: Number_of_Children_At_Home {
-    label: "Number of Children At Home"
-    group_label: "Demographic"
-    type: number
-    sql: ${TABLE}.`Number of Children At Home`;;
-  }
-
-  dimension: Occupation {
-    label: "Occupation"
-    group_label: "Demographic"
-    type: string
-    sql: ${TABLE}.`Occupation`;;
-  }
-
-  dimension: Total_Children {
-    label: "Total Children"
-    group_label: "Demographic"
-    type: number
-    sql: ${TABLE}.`Total Children`;;
-  }
-
-  dimension: Yearly_Income {
-    label: "Yearly Income"
-    group_label: "Demographic"
-    type: number
-    sql: ${TABLE}.`Yearly Income`;;
   }
 
   dimension: ISO8601Week_Due_ISO_8601_Day {
@@ -1237,59 +1103,6 @@ view: ASAdventureSmall {
     drill_fields: [ISO8601Week_ISO_8601_Week]
   }
 
-  dimension: Internet_Sales_Orders_Item_Description {
-    label: " Item Description"
-    group_label: "Internet Sales Orders"
-    type: string
-    sql: ${TABLE}.`Item Description`;;
-  }
-
-  dimension: Internet_Sales_Orders_Order_Number {
-    label: "  Order Number"
-    group_label: "Internet Sales Orders"
-    type: string
-    sql: ${TABLE}.`Order Number`;;
-    drill_fields: [Internet_Sales_Orders_Item_Description]
-  }
-
-  dimension: Address {
-    label: "Address"
-    group_label: "Location"
-    type: string
-    sql: ${TABLE}.`Address`;;
-  }
-
-  dimension: City2 {
-    label: "City2"
-    description: "Customer City attribute"
-    group_label: "Location"
-    type: string
-    sql: ${TABLE}.`City2`;;
-  }
-
-  dimension: Country2 {
-    label: "Country2"
-    description: "Customer Country Name"
-    group_label: "Location"
-    type: string
-    sql: ${TABLE}.`Country2`;;
-  }
-
-  dimension: Postal_Code_2 {
-    label: "Postal Code 2"
-    description: "Customer's Postal Code"
-    group_label: "Location"
-    type: string
-    sql: ${TABLE}.`Postal Code 2`;;
-  }
-
-  dimension: State_Province2 {
-    label: "State-Province2"
-    group_label: "Location"
-    type: string
-    sql: ${TABLE}.`State-Province2`;;
-  }
-
   dimension: Bank_Name2 {
     label: "Bank Name2"
     group_label: "Order Data"
@@ -1490,21 +1303,6 @@ view: ASAdventureSmall {
     group_label: "Sales Data"
     type: number
     sql: ${TABLE}.`Annual Sales`;;
-  }
-
-  dimension: Sales_Reasons_Dim_Sales_Reason {
-    label: " Sales Reason"
-    group_label: "Sales Reasons"
-    type: string
-    sql: ${TABLE}.`Dim Sales Reason`;;
-  }
-
-  dimension: Sales_Reasons_Sales_Reason_Reason_Type {
-    label: "  Sales Reason Type"
-    group_label: "Sales Reasons"
-    type: string
-    sql: ${TABLE}.`Sales Reason Reason Type`;;
-    drill_fields: [Sales_Reasons_Dim_Sales_Reason]
   }
 
   dimension: ISO8601Week_Ship_ISO_8601_Day {
@@ -1778,40 +1576,6 @@ view: ASAdventureSmall {
     sql: ${TABLE}.`QTD-ISA`;;
   }
 
-  measure: Balance {
-    label: "Balance"
-    group_label: "Finance"
-    type: average
-    sql: ${TABLE}.`Balance`;;
-  }
-
-  measure: Internet_Order_Count {
-    label: "Internet Order Count"
-    group_label: "InternetSales"
-    description: "URDH = Empty Cells"
-    value_format: "#,##0"
-    type: count_distinct
-    sql: ${TABLE}.`Internet Order Count`;;
-  }
-
-  measure: Internet_Sales_Amount_Local {
-    label: "Internet Sales Amount Local"
-    group_label: "InternetSales"
-    description: "URDH = Repeated Values"
-    value_format: "#,##0.00"
-    type: sum
-    sql: ${TABLE}.`Internet Sales Amount Local`;;
-  }
-
-  measure: Order_Quantity_Long {
-    label: "Order Quantity Long"
-    group_label: "InternetSales"
-    description: "URDH = Repeated Values.  Created to match the Long version of Order Quantity in the SSAS Adventure Works Cube."
-    value_format: "#,##0"
-    type: sum
-    sql: ${TABLE}.`Order Quantity Long`;;
-  }
-
   measure: Sales_Amount_Quota {
     label: "Sales Amount Quota"
     group_label: "Quotas"
@@ -1847,83 +1611,6 @@ view: ASAdventureSmall {
     sql: ${TABLE}.`Reseller Sales Amount Local`;;
   }
 
-  measure: Calc_LagPlusIOC {
-    label: "Calc-LagPlusIOC"
-    group_label: "TimeRelative"
-    type: count_distinct
-    sql: ${TABLE}.`Calc-LagPlusIOC`;;
-  }
-
-  measure: Calc_LagPlusLag2_IOC {
-    label: "Calc-LagPlusLag2-IOC"
-    group_label: "TimeRelative"
-    type: count_distinct
-    sql: ${TABLE}.`Calc-LagPlusLag2-IOC`;;
-  }
-
-  measure: Canada_IOC {
-    label: "Canada-IOC"
-    group_label: "TimeRelative"
-    type: count_distinct
-    sql: ${TABLE}.`Canada-IOC`;;
-  }
-
-  measure: Curr_IOC {
-    label: "Curr-IOC"
-    group_label: "TimeRelative"
-    type: count_distinct
-    sql: ${TABLE}.`Curr-IOC`;;
-  }
-
-  measure: France_IOC {
-    label: "France-IOC"
-    group_label: "TimeRelative"
-    type: count_distinct
-    sql: ${TABLE}.`France-IOC`;;
-  }
-
-  measure: Lag_IOC {
-    label: "Lag-IOC"
-    group_label: "TimeRelative"
-    type: count_distinct
-    sql: ${TABLE}.`Lag-IOC`;;
-  }
-
-  measure: Lag2_IOC {
-    label: "Lag2-IOC"
-    group_label: "TimeRelative"
-    type: count_distinct
-    sql: ${TABLE}.`Lag2-IOC`;;
-  }
-
-  measure: Lag3_IOC {
-    label: "Lag3-IOC"
-    group_label: "TimeRelative"
-    type: count_distinct
-    sql: ${TABLE}.`Lag3-IOC`;;
-  }
-
-  measure: LagCanada_IOC {
-    label: "LagCanada-IOC"
-    group_label: "TimeRelative"
-    type: count_distinct
-    sql: ${TABLE}.`LagCanada-IOC`;;
-  }
-
-  measure: LagPlusConstant_IOC {
-    label: "LagPlusConstant-IOC"
-    group_label: "TimeRelative"
-    type: count_distinct
-    sql: ${TABLE}.`LagPlusConstant-IOC`;;
-  }
-
-  measure: LagProduct_IOC {
-    label: "LagProduct-IOC"
-    group_label: "TimeRelative"
-    type: count_distinct
-    sql: ${TABLE}.`LagProduct-IOC`;;
-  }
-
   measure: LagTimesConstant_IOC {
     label: "LagTimesConstant-IOC"
     group_label: "TimeRelative"
@@ -1931,88 +1618,11 @@ view: ASAdventureSmall {
     sql: ${TABLE}.`LagTimesConstant-IOC`;;
   }
 
-  measure: LagTimesIOC {
-    label: "LagTimesIOC"
-    group_label: "TimeRelative"
-    type: count_distinct
-    sql: ${TABLE}.`LagTimesIOC`;;
-  }
-
-  measure: Lead_IOC {
-    label: "Lead-IOC"
-    group_label: "TimeRelative"
-    type: count_distinct
-    sql: ${TABLE}.`Lead-IOC`;;
-  }
-
-  measure: P2DSum_IOC {
-    label: "P2DSum-IOC"
-    group_label: "TimeRelative"
-    type: count_distinct
-    sql: ${TABLE}.`P2DSum-IOC`;;
-  }
-
-  measure: P2D_RNG_SM_Sum_IOC {
-    label: "P2D_RNG_SM_Sum-IOC"
-    group_label: "TimeRelative"
-    type: count_distinct
-    sql: ${TABLE}.`P2D_RNG_SM_Sum-IOC`;;
-  }
-
-  measure: PP_RNG_SM_Sum_IOC {
-    label: "PP_RNG_SM_Sum-IOC"
-    group_label: "TimeRelative"
-    type: count_distinct
-    sql: ${TABLE}.`PP_RNG_SM_Sum-IOC`;;
-  }
-
   measure: PP_StandardMonth_IOC {
     label: "PP_StandardMonth-IOC"
     group_label: "TimeRelative"
     type: count_distinct
     sql: ${TABLE}.`PP_StandardMonth-IOC`;;
-  }
-
-  measure: RNG_SM_Sum_IOC {
-    label: "RNG_SM_Sum-IOC"
-    group_label: "TimeRelative"
-    type: count_distinct
-    sql: ${TABLE}.`RNG_SM_Sum-IOC`;;
-  }
-
-  measure: RangeLagSum_IOC {
-    label: "RangeLagSum-IOC"
-    group_label: "TimeRelative"
-    type: count_distinct
-    sql: ${TABLE}.`RangeLagSum-IOC`;;
-  }
-
-  measure: RangeSMSum_IOC {
-    label: "RangeSMSum-IOC"
-    group_label: "TimeRelative"
-    type: count_distinct
-    sql: ${TABLE}.`RangeSMSum-IOC`;;
-  }
-
-  measure: Rolling_IOC {
-    label: "Rolling-IOC"
-    group_label: "TimeRelative"
-    type: count_distinct
-    sql: ${TABLE}.`Rolling-IOC`;;
-  }
-
-  measure: RollingWithPrev_IOC {
-    label: "RollingWithPrev-IOC"
-    group_label: "TimeRelative"
-    type: count_distinct
-    sql: ${TABLE}.`RollingWithPrev-IOC`;;
-  }
-
-  measure: SMLag_IOC {
-    label: "SMLag-IOC"
-    group_label: "TimeRelative"
-    type: count_distinct
-    sql: ${TABLE}.`SMLag-IOC`;;
   }
 
   measure: Sales_Amount_Order_Retail445_30PrdMvAvg {
@@ -2034,104 +1644,6 @@ view: ASAdventureSmall {
     group_label: "TimeRelative"
     type: average
     sql: ${TABLE}.`Sales Amount-Order Retail445-30PrdMvAvgPrevYearGrowthPct`;;
-  }
-
-  measure: Stdev_IOC {
-    label: "Stdev-IOC"
-    group_label: "TimeRelative"
-    type: average
-    sql: ${TABLE}.`Stdev-IOC`;;
-  }
-
-  measure: YTDSum_IOC {
-    label: "YTDSum-IOC"
-    group_label: "TimeRelative"
-    type: count_distinct
-    sql: ${TABLE}.`YTDSum-IOC`;;
-  }
-
-  measure: Year2008_IOC {
-    label: "Year2008-IOC"
-    group_label: "TimeRelative"
-    type: count_distinct
-    sql: ${TABLE}.`Year2008-IOC`;;
-  }
-
-  measure: Accessories_IOC {
-    label: "Accessories-IOC"
-    group_label: "Tuple"
-    type: count_distinct
-    sql: ${TABLE}.`Accessories-IOC`;;
-  }
-
-  measure: CalcAvgSA {
-    label: "CalcAvgSA"
-    group_label: "Tuple"
-    type: average
-    sql: ${TABLE}.`CalcAvgSA`;;
-  }
-
-  measure: Canada2007_IOC {
-    label: "Canada2007-IOC"
-    group_label: "Tuple"
-    type: count_distinct
-    sql: ${TABLE}.`Canada2007-IOC`;;
-  }
-
-  measure: France_Bike_Sales {
-    label: "France-Bike-Sales"
-    group_label: "Tuple"
-    type: average
-    sql: ${TABLE}.`France-Bike-Sales`;;
-  }
-
-  measure: France_Sales {
-    label: "France-Sales"
-    group_label: "Tuple"
-    type: average
-    sql: ${TABLE}.`France-Sales`;;
-  }
-
-  measure: Helmets_IOC {
-    label: "Helmets-IOC"
-    group_label: "Tuple"
-    type: count_distinct
-    sql: ${TABLE}.`Helmets-IOC`;;
-  }
-
-  measure: M_Bike_Same_Hier_Sales {
-    label: "M-Bike-Same-Hier-Sales"
-    group_label: "Tuple"
-    type: average
-    sql: ${TABLE}.`M-Bike-Same-Hier-Sales`;;
-  }
-
-  measure: Mountain_Bike_IOC {
-    label: "Mountain-Bike-IOC"
-    group_label: "Tuple"
-    type: count_distinct
-    sql: ${TABLE}.`Mountain-Bike-IOC`;;
-  }
-
-  measure: Mountain_Bike_Sales {
-    label: "Mountain-Bike-Sales"
-    group_label: "Tuple"
-    type: average
-    sql: ${TABLE}.`Mountain-Bike-Sales`;;
-  }
-
-  measure: PrevMonth_IOC {
-    label: "PrevMonth-IOC"
-    group_label: "Tuple"
-    type: count_distinct
-    sql: ${TABLE}.`PrevMonth-IOC`;;
-  }
-
-  measure: SportHelmets_IOC {
-    label: "SportHelmets-IOC"
-    group_label: "Tuple"
-    type: count_distinct
-    sql: ${TABLE}.`SportHelmets-IOC`;;
   }
 
   set: ResellerDetails {
