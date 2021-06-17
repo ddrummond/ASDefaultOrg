@@ -1,6 +1,6 @@
 view: ASAdventureSmall {
   label: "ASAdventureSmall"
-  sql_table_name: "AdventureWorks_2169"."ASAdventureSmall";;
+  sql_table_name: "AdventureWorksDW2012Multidimensional-EE"."ASAdventureSmall";;
 
   dimension: Account_Description {
     label: "Account Description"

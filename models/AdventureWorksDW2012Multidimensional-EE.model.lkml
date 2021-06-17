@@ -12,7 +12,7 @@ include: "/views/*.view.lkml"                # include all views in the views/ f
 # Project: AdventureWorks_2169
 # Cube: ASAdventureSmall
 
-label: "AdventureWorks_2169"
+label: "AdventureWorksDW2012Multidimensional-EE"
 
 explore: ASAdventureSmall {
   label: "ASAdventureSmall"
