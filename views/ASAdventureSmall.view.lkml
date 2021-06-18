@@ -26,6 +26,12 @@ view: ASAdventureSmall {
     sql: ${TABLE}.`Business Type2`;;
   }
 
+  dimension: Category2 {
+    label: "Category2"
+    type: string
+    sql: ${TABLE}.`Category2`;;
+  }
+
   dimension: City3 {
     label: "City3"
     type: string
@@ -1035,7 +1041,7 @@ view: ASAdventureSmall {
   dimension: Retail445_Due_Reporting_Day {
     label: "  Due.Reporting Day"
     group_label: "Due.Retail445"
-    type: date_time
+    type: date
     sql: ${TABLE}.`Due.Reporting Day`;;
   }
 
@@ -1434,7 +1440,7 @@ view: ASAdventureSmall {
   dimension: Retail445_Reporting_Day {
     label: "  Reporting Day"
     group_label: "Retail445"
-    type: date_time
+    type: date
     sql: ${TABLE}.`Reporting Day`;;
   }
 
@@ -1533,7 +1539,7 @@ view: ASAdventureSmall {
   dimension: Retail445_Ship_Reporting_Day {
     label: "  Ship.Reporting Day"
     group_label: "Ship.Retail445"
-    type: date_time
+    type: date
     sql: ${TABLE}.`Ship.Reporting Day`;;
   }
 
