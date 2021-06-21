@@ -1018,7 +1018,7 @@ view: ASAdventureSmall {
   dimension: ISO8601Week_Due_ISO_8601_Day {
     label: "  Due.ISO 8601 Day"
     group_label: "Due.ISO8601Week"
-    type: string
+    type: date_time
     sql: ${TABLE}.`Due.ISO 8601 Day`;;
   }
 
@@ -1223,7 +1223,7 @@ view: ASAdventureSmall {
   dimension: ISO8601Week_ISO_8601_Day {
     label: "  ISO 8601 Day"
     group_label: "ISO8601Week"
-    type: string
+    type: date_time
     sql: ${TABLE}.`ISO 8601 Day`;;
   }
 
@@ -1516,7 +1516,7 @@ view: ASAdventureSmall {
   dimension: ISO8601Week_Ship_ISO_8601_Day {
     label: "  Ship.ISO 8601 Day"
     group_label: "Ship.ISO8601Week"
-    type: string
+    type: date_time
     sql: ${TABLE}.`Ship.ISO 8601 Day`;;
   }
 
