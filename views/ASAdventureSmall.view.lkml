@@ -1056,7 +1056,7 @@ view: ASAdventureSmall {
   dimension: Retail445_Due_Reporting_Month {
     label: "    Due.Reporting Month"
     group_label: "Due.Retail445"
-    type: string
+    type: date_time
     sql: ${TABLE}.`Due.Reporting Month`;;
     drill_fields: [Retail445_Due_Reporting_Week]
   }
@@ -1455,7 +1455,7 @@ view: ASAdventureSmall {
   dimension: Retail445_Reporting_Month {
     label: "    Reporting Month"
     group_label: "Retail445"
-    type: string
+    type: date_time
     sql: ${TABLE}.`Reporting Month`;;
     drill_fields: [Retail445_Reporting_Week]
   }
@@ -1554,7 +1554,7 @@ view: ASAdventureSmall {
   dimension: Retail445_Ship_Reporting_Month {
     label: "    Ship.Reporting Month"
     group_label: "Ship.Retail445"
-    type: string
+    type: date_time
     sql: ${TABLE}.`Ship.Reporting Month`;;
     drill_fields: [Retail445_Ship_Reporting_Week]
   }
