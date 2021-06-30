@@ -1088,7 +1088,7 @@ view: ASAdventureSmall {
   dimension: StandardMonth_Due_Date {
     label: " Due.Date"
     group_label: "Due.StandardMonth"
-    type: date_time
+    type: number
     sql: ${TABLE}.`Due.Date`;;
   }
 
@@ -1127,7 +1127,7 @@ view: ASAdventureSmall {
   dimension: StandardWeek_Due_Date {
     label: " Due.Date"
     group_label: "Due.StandardWeek"
-    type: date_time
+    type: number
     sql: ${TABLE}.`Due.Date`;;
   }
 
@@ -1586,7 +1586,7 @@ view: ASAdventureSmall {
   dimension: StandardMonth_Ship_Date {
     label: " Ship.Date"
     group_label: "Ship.StandardMonth"
-    type: date_time
+    type: number
     sql: ${TABLE}.`Ship.Date`;;
   }
 
@@ -1625,7 +1625,7 @@ view: ASAdventureSmall {
   dimension: StandardWeek_Ship_Date {
     label: " Ship.Date"
     group_label: "Ship.StandardWeek"
-    type: date_time
+    type: number
     sql: ${TABLE}.`Ship.Date`;;
   }
 
@@ -1648,7 +1648,7 @@ view: ASAdventureSmall {
   dimension: StandardMonth_Date {
     label: " Date"
     group_label: "StandardMonth"
-    type: date_time
+    type: number
     sql: ${TABLE}.`Date`;;
   }
 
@@ -1687,7 +1687,7 @@ view: ASAdventureSmall {
   dimension: StandardWeek_Date {
     label: " Date"
     group_label: "StandardWeek"
-    type: date_time
+    type: number
     sql: ${TABLE}.`Date`;;
   }
 
