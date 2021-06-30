@@ -1048,7 +1048,7 @@ view: ASAdventureSmall {
   dimension: Retail445_Due_Reporting_Half_Year {
     label: "      Due.Reporting Half Year"
     group_label: "Due.Retail445"
-    type: string
+    type: date
     sql: ${TABLE}.`Due.Reporting Half Year`;;
     drill_fields: [Retail445_Due_Reporting_Quarter]
   }
@@ -1064,7 +1064,7 @@ view: ASAdventureSmall {
   dimension: Retail445_Due_Reporting_Quarter {
     label: "     Due.Reporting Quarter"
     group_label: "Due.Retail445"
-    type: string
+    type: date
     sql: ${TABLE}.`Due.Reporting Quarter`;;
     drill_fields: [Retail445_Due_Reporting_Month]
   }
@@ -1072,7 +1072,7 @@ view: ASAdventureSmall {
   dimension: Retail445_Due_Reporting_Week {
     label: "   Due.Reporting Week"
     group_label: "Due.Retail445"
-    type: string
+    type: date
     sql: ${TABLE}.`Due.Reporting Week`;;
     drill_fields: [Retail445_Due_Reporting_Day]
   }
@@ -1080,7 +1080,7 @@ view: ASAdventureSmall {
   dimension: Retail445_Due_Reporting_Year {
     label: "       Due.Reporting Year"
     group_label: "Due.Retail445"
-    type: string
+    type: date
     sql: ${TABLE}.`Due.Reporting Year`;;
     drill_fields: [Retail445_Due_Reporting_Half_Year]
   }
@@ -1088,14 +1088,14 @@ view: ASAdventureSmall {
   dimension: StandardMonth_Due_Date {
     label: " Due.Date"
     group_label: "Due.StandardMonth"
-    type: number
+    type: date_time
     sql: ${TABLE}.`Due.Date`;;
   }
 
   dimension: StandardMonth_Due_Half_Year {
     label: "    Due.Half Year"
     group_label: "Due.StandardMonth"
-    type: string
+    type: date_time
     sql: ${TABLE}.`Due.Half Year`;;
     drill_fields: [StandardMonth_Due_Quarter]
   }
@@ -1103,7 +1103,7 @@ view: ASAdventureSmall {
   dimension: StandardMonth_Due_Month {
     label: "  Due.Month"
     group_label: "Due.StandardMonth"
-    type: string
+    type: date_time
     sql: ${TABLE}.`Due.Month`;;
     drill_fields: [StandardMonth_Due_Date]
   }
@@ -1111,7 +1111,7 @@ view: ASAdventureSmall {
   dimension: StandardMonth_Due_Quarter {
     label: "   Due.Quarter"
     group_label: "Due.StandardMonth"
-    type: string
+    type: date_time
     sql: ${TABLE}.`Due.Quarter`;;
     drill_fields: [StandardMonth_Due_Month]
   }
@@ -1119,7 +1119,7 @@ view: ASAdventureSmall {
   dimension: StandardMonth_Due_Year {
     label: "     Due.Year"
     group_label: "Due.StandardMonth"
-    type: string
+    type: date_time
     sql: ${TABLE}.`Due.Year`;;
     drill_fields: [StandardMonth_Due_Half_Year]
   }
@@ -1127,7 +1127,7 @@ view: ASAdventureSmall {
   dimension: StandardWeek_Due_Date {
     label: " Due.Date"
     group_label: "Due.StandardWeek"
-    type: number
+    type: date_time
     sql: ${TABLE}.`Due.Date`;;
   }
 
@@ -1142,7 +1142,7 @@ view: ASAdventureSmall {
   dimension: StandardWeek_Due_Year {
     label: "   Due.Year"
     group_label: "Due.StandardWeek"
-    type: string
+    type: date_time
     sql: ${TABLE}.`Due.Year`;;
     drill_fields: [StandardWeek_Due_Week]
   }
@@ -1447,7 +1447,7 @@ view: ASAdventureSmall {
   dimension: Retail445_Reporting_Half_Year {
     label: "      Reporting Half Year"
     group_label: "Retail445"
-    type: string
+    type: date
     sql: ${TABLE}.`Reporting Half Year`;;
     drill_fields: [Retail445_Reporting_Quarter]
   }
@@ -1463,7 +1463,7 @@ view: ASAdventureSmall {
   dimension: Retail445_Reporting_Quarter {
     label: "     Reporting Quarter"
     group_label: "Retail445"
-    type: string
+    type: date
     sql: ${TABLE}.`Reporting Quarter`;;
     drill_fields: [Retail445_Reporting_Month]
   }
@@ -1471,7 +1471,7 @@ view: ASAdventureSmall {
   dimension: Retail445_Reporting_Week {
     label: "   Reporting Week"
     group_label: "Retail445"
-    type: string
+    type: date
     sql: ${TABLE}.`Reporting Week`;;
     drill_fields: [Retail445_Reporting_Day]
   }
@@ -1479,7 +1479,7 @@ view: ASAdventureSmall {
   dimension: Retail445_Reporting_Year {
     label: "       Reporting Year"
     group_label: "Retail445"
-    type: string
+    type: date
     sql: ${TABLE}.`Reporting Year`;;
     drill_fields: [Retail445_Reporting_Half_Year]
   }
@@ -1546,7 +1546,7 @@ view: ASAdventureSmall {
   dimension: Retail445_Ship_Reporting_Half_Year {
     label: "      Ship.Reporting Half Year"
     group_label: "Ship.Retail445"
-    type: string
+    type: date
     sql: ${TABLE}.`Ship.Reporting Half Year`;;
     drill_fields: [Retail445_Ship_Reporting_Quarter]
   }
@@ -1562,7 +1562,7 @@ view: ASAdventureSmall {
   dimension: Retail445_Ship_Reporting_Quarter {
     label: "     Ship.Reporting Quarter"
     group_label: "Ship.Retail445"
-    type: string
+    type: date
     sql: ${TABLE}.`Ship.Reporting Quarter`;;
     drill_fields: [Retail445_Ship_Reporting_Month]
   }
@@ -1570,7 +1570,7 @@ view: ASAdventureSmall {
   dimension: Retail445_Ship_Reporting_Week {
     label: "   Ship.Reporting Week"
     group_label: "Ship.Retail445"
-    type: string
+    type: date
     sql: ${TABLE}.`Ship.Reporting Week`;;
     drill_fields: [Retail445_Ship_Reporting_Day]
   }
@@ -1578,7 +1578,7 @@ view: ASAdventureSmall {
   dimension: Retail445_Ship_Reporting_Year {
     label: "       Ship.Reporting Year"
     group_label: "Ship.Retail445"
-    type: string
+    type: date
     sql: ${TABLE}.`Ship.Reporting Year`;;
     drill_fields: [Retail445_Ship_Reporting_Half_Year]
   }
@@ -1586,14 +1586,14 @@ view: ASAdventureSmall {
   dimension: StandardMonth_Ship_Date {
     label: " Ship.Date"
     group_label: "Ship.StandardMonth"
-    type: number
+    type: date_time
     sql: ${TABLE}.`Ship.Date`;;
   }
 
   dimension: StandardMonth_Ship_Half_Year {
     label: "    Ship.Half Year"
     group_label: "Ship.StandardMonth"
-    type: string
+    type: date_time
     sql: ${TABLE}.`Ship.Half Year`;;
     drill_fields: [StandardMonth_Ship_Quarter]
   }
@@ -1601,7 +1601,7 @@ view: ASAdventureSmall {
   dimension: StandardMonth_Ship_Month {
     label: "  Ship.Month"
     group_label: "Ship.StandardMonth"
-    type: string
+    type: date_time
     sql: ${TABLE}.`Ship.Month`;;
     drill_fields: [StandardMonth_Ship_Date]
   }
@@ -1609,7 +1609,7 @@ view: ASAdventureSmall {
   dimension: StandardMonth_Ship_Quarter {
     label: "   Ship.Quarter"
     group_label: "Ship.StandardMonth"
-    type: string
+    type: date_time
     sql: ${TABLE}.`Ship.Quarter`;;
     drill_fields: [StandardMonth_Ship_Month]
   }
@@ -1617,7 +1617,7 @@ view: ASAdventureSmall {
   dimension: StandardMonth_Ship_Year {
     label: "     Ship.Year"
     group_label: "Ship.StandardMonth"
-    type: string
+    type: date_time
     sql: ${TABLE}.`Ship.Year`;;
     drill_fields: [StandardMonth_Ship_Half_Year]
   }
@@ -1625,7 +1625,7 @@ view: ASAdventureSmall {
   dimension: StandardWeek_Ship_Date {
     label: " Ship.Date"
     group_label: "Ship.StandardWeek"
-    type: number
+    type: date_time
     sql: ${TABLE}.`Ship.Date`;;
   }
 
@@ -1640,7 +1640,7 @@ view: ASAdventureSmall {
   dimension: StandardWeek_Ship_Year {
     label: "   Ship.Year"
     group_label: "Ship.StandardWeek"
-    type: string
+    type: date_time
     sql: ${TABLE}.`Ship.Year`;;
     drill_fields: [StandardWeek_Ship_Week]
   }
@@ -1648,14 +1648,14 @@ view: ASAdventureSmall {
   dimension: StandardMonth_Date {
     label: " Date"
     group_label: "StandardMonth"
-    type: number
+    type: date_time
     sql: ${TABLE}.`Date`;;
   }
 
   dimension: StandardMonth_Half_Year {
     label: "    Half Year"
     group_label: "StandardMonth"
-    type: string
+    type: date_time
     sql: ${TABLE}.`Half Year`;;
     drill_fields: [StandardMonth_Quarter]
   }
@@ -1663,7 +1663,7 @@ view: ASAdventureSmall {
   dimension: StandardMonth_Month {
     label: "  Month"
     group_label: "StandardMonth"
-    type: string
+    type: date_time
     sql: ${TABLE}.`Month`;;
     drill_fields: [StandardMonth_Date]
   }
@@ -1671,7 +1671,7 @@ view: ASAdventureSmall {
   dimension: StandardMonth_Quarter {
     label: "   Quarter"
     group_label: "StandardMonth"
-    type: string
+    type: date_time
     sql: ${TABLE}.`Quarter`;;
     drill_fields: [StandardMonth_Month]
   }
@@ -1679,7 +1679,7 @@ view: ASAdventureSmall {
   dimension: StandardMonth_Year {
     label: "     Year"
     group_label: "StandardMonth"
-    type: string
+    type: date_time
     sql: ${TABLE}.`Year`;;
     drill_fields: [StandardMonth_Half_Year]
   }
@@ -1687,7 +1687,7 @@ view: ASAdventureSmall {
   dimension: StandardWeek_Date {
     label: " Date"
     group_label: "StandardWeek"
-    type: number
+    type: date_time
     sql: ${TABLE}.`Date`;;
   }
 
@@ -1702,7 +1702,7 @@ view: ASAdventureSmall {
   dimension: StandardWeek_Year {
     label: "   Year"
     group_label: "StandardWeek"
-    type: string
+    type: date_time
     sql: ${TABLE}.`Year`;;
     drill_fields: [StandardWeek_Week]
   }
