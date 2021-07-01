@@ -1085,27 +1085,11 @@ view: ASAdventureSmall {
     drill_fields: [Retail445_Due_Reporting_Half_Year]
   }
 
-  dimension: StandardMonth_Due_Date {
-    label: " Due.Date"
-    group_label: "Due.StandardMonth"
-    type: number
-    sql: ${TABLE}.`Due.Date`;;
-  }
-
-  dimension: StandardMonth_Due_Half_Year {
-    label: "    Due.Half Year"
-    group_label: "Due.StandardMonth"
-    type: date_time
-    sql: ${TABLE}.`Due.Half Year`;;
-    drill_fields: [StandardMonth_Due_Quarter]
-  }
-
   dimension: StandardMonth_Due_Month {
     label: "  Due.Month"
     group_label: "Due.StandardMonth"
     type: date_time
     sql: ${TABLE}.`Due.Month`;;
-    drill_fields: [StandardMonth_Due_Date]
   }
 
   dimension: StandardMonth_Due_Quarter {
@@ -1117,11 +1101,11 @@ view: ASAdventureSmall {
   }
 
   dimension: StandardMonth_Due_Year {
-    label: "     Due.Year"
+    label: "    Due.Year"
     group_label: "Due.StandardMonth"
     type: date_time
     sql: ${TABLE}.`Due.Year`;;
-    drill_fields: [StandardMonth_Due_Half_Year]
+    drill_fields: [StandardMonth_Due_Quarter]
   }
 
   dimension: StandardWeek_Due_Date {
@@ -1583,27 +1567,11 @@ view: ASAdventureSmall {
     drill_fields: [Retail445_Ship_Reporting_Half_Year]
   }
 
-  dimension: StandardMonth_Ship_Date {
-    label: " Ship.Date"
-    group_label: "Ship.StandardMonth"
-    type: number
-    sql: ${TABLE}.`Ship.Date`;;
-  }
-
-  dimension: StandardMonth_Ship_Half_Year {
-    label: "    Ship.Half Year"
-    group_label: "Ship.StandardMonth"
-    type: date_time
-    sql: ${TABLE}.`Ship.Half Year`;;
-    drill_fields: [StandardMonth_Ship_Quarter]
-  }
-
   dimension: StandardMonth_Ship_Month {
     label: "  Ship.Month"
     group_label: "Ship.StandardMonth"
     type: date_time
     sql: ${TABLE}.`Ship.Month`;;
-    drill_fields: [StandardMonth_Ship_Date]
   }
 
   dimension: StandardMonth_Ship_Quarter {
@@ -1615,11 +1583,11 @@ view: ASAdventureSmall {
   }
 
   dimension: StandardMonth_Ship_Year {
-    label: "     Ship.Year"
+    label: "    Ship.Year"
     group_label: "Ship.StandardMonth"
     type: date_time
     sql: ${TABLE}.`Ship.Year`;;
-    drill_fields: [StandardMonth_Ship_Half_Year]
+    drill_fields: [StandardMonth_Ship_Quarter]
   }
 
   dimension: StandardWeek_Ship_Date {
@@ -1645,27 +1613,11 @@ view: ASAdventureSmall {
     drill_fields: [StandardWeek_Ship_Week]
   }
 
-  dimension: StandardMonth_Date {
-    label: " Date"
-    group_label: "StandardMonth"
-    type: number
-    sql: ${TABLE}.`Date`;;
-  }
-
-  dimension: StandardMonth_Half_Year {
-    label: "    Half Year"
-    group_label: "StandardMonth"
-    type: date_time
-    sql: ${TABLE}.`Half Year`;;
-    drill_fields: [StandardMonth_Quarter]
-  }
-
   dimension: StandardMonth_Month {
     label: "  Month"
     group_label: "StandardMonth"
     type: date_time
     sql: ${TABLE}.`Month`;;
-    drill_fields: [StandardMonth_Date]
   }
 
   dimension: StandardMonth_Quarter {
@@ -1677,11 +1629,11 @@ view: ASAdventureSmall {
   }
 
   dimension: StandardMonth_Year {
-    label: "     Year"
+    label: "    Year"
     group_label: "StandardMonth"
     type: date_time
     sql: ${TABLE}.`Year`;;
-    drill_fields: [StandardMonth_Half_Year]
+    drill_fields: [StandardMonth_Quarter]
   }
 
   dimension: StandardWeek_Date {
@@ -2151,6 +2103,12 @@ view: ASAdventureSmall {
 #
 # To avoid merge conflicts, put your non-AtScale customizations below
 # BEGIN CUSTOMIZATIONS
+  dimension_group: StandardMonth_Custom {
+    type: time
+    timeframes: [month, quarter, year]
+    sql: ${TABLE}.`Month`;;
+    drill_fields: [StandardMonth_Month, StandardMonth_Quarter, StandardMonth_Year]
+  }
 # END CUSTOMIZATIONS
 #
 }
