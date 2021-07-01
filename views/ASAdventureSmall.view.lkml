@@ -2105,9 +2105,9 @@ view: ASAdventureSmall {
 # BEGIN CUSTOMIZATIONS
   dimension_group: StandardMonth_Custom {
     type: time
-    timeframes: [month, quarter, year]
+    timeframes: [ year, quarter, month]
     sql: ${TABLE}.`Month`;;
-    drill_fields: [StandardMonth_Month, StandardMonth_Quarter, StandardMonth_Year]
+    drill_fields: [ StandardMonth_Year, StandardMonth_Quarter, StandardMonth_Month]
   }
 # END CUSTOMIZATIONS
 #
