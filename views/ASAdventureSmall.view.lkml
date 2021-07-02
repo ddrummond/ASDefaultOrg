@@ -1600,6 +1600,7 @@ view: ASAdventureSmall {
   dimension: StandardMonth_Month {
     label: "  Month"
     group_label: "StandardMonth"
+    datatype: timestamp
     type: date_month
     sql: ${TABLE}.`Month`;;
   }
@@ -1608,6 +1609,7 @@ view: ASAdventureSmall {
     label: "   Quarter"
     group_label: "StandardMonth"
     type: date_quarter
+    datatype: timestamp
     sql: ${TABLE}.`Quarter`;;
     drill_fields: [StandardMonth_Month]
   }
@@ -1616,6 +1618,7 @@ view: ASAdventureSmall {
     label: "    Year"
     group_label: "StandardMonth"
     type: date_year
+    datatype: timestamp
     sql: ${TABLE}.`Year`;;
     drill_fields: [StandardMonth_Quarter]
   }
