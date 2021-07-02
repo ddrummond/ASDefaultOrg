@@ -1600,14 +1600,14 @@ view: ASAdventureSmall {
   dimension: StandardMonth_Month {
     label: "  Month"
     group_label: "StandardMonth"
-    type: date_time
+    type: date_month
     sql: ${TABLE}.`Month`;;
   }
 
   dimension: StandardMonth_Quarter {
     label: "   Quarter"
     group_label: "StandardMonth"
-    type: date_time
+    type: date_quarter
     sql: ${TABLE}.`Quarter`;;
     drill_fields: [StandardMonth_Month]
   }
@@ -1615,7 +1615,7 @@ view: ASAdventureSmall {
   dimension: StandardMonth_Year {
     label: "    Year"
     group_label: "StandardMonth"
-    type: date_time
+    type: date_year
     sql: ${TABLE}.`Year`;;
     drill_fields: [StandardMonth_Quarter]
   }
@@ -2087,13 +2087,6 @@ view: ASAdventureSmall {
 #
 # To avoid merge conflicts, put your non-AtScale customizations below
 # BEGIN CUSTOMIZATIONS
-  dimension_group: Retail445_Reporting_Year_Custom {
-    type: time
-    datatype : date
-    timeframes: [ year, quarter, month, week, date]
-    sql: ${TABLE}.`Reporting Day`;;
-    drill_fields: [ Retail445_Reporting_Year, Retail445_Reporting_Quarter, Retail445_Reporting_Month, Retail445_Reporting_Week, Retail445_Reporting_Day]
-  }
 # END CUSTOMIZATIONS
 #
 }
