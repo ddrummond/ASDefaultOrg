@@ -1431,7 +1431,7 @@ view: ASAdventureSmall {
   dimension: Retail445_Reporting_Month {
     label: "    Reporting Month"
     group_label: "Retail445"
-    type: date
+    type: date_month
     sql: ${TABLE}.`Reporting Month`;;
     drill_fields: [Retail445_Reporting_Week]
   }
@@ -1439,7 +1439,7 @@ view: ASAdventureSmall {
   dimension: Retail445_Reporting_Quarter {
     label: "     Reporting Quarter"
     group_label: "Retail445"
-    type: date
+    type: date_quarter
     sql: ${TABLE}.`Reporting Quarter`;;
     drill_fields: [Retail445_Reporting_Month]
   }
@@ -1447,7 +1447,7 @@ view: ASAdventureSmall {
   dimension: Retail445_Reporting_Week {
     label: "   Reporting Week"
     group_label: "Retail445"
-    type: date
+    type: date_week
     sql: ${TABLE}.`Reporting Week`;;
     drill_fields: [Retail445_Reporting_Day]
   }
@@ -1455,7 +1455,7 @@ view: ASAdventureSmall {
   dimension: Retail445_Reporting_Year {
     label: "      Reporting Year"
     group_label: "Retail445"
-    type: date
+    type: date_year
     sql: ${TABLE}.`Reporting Year`;;
     drill_fields: [Retail445_Reporting_Quarter]
   }
