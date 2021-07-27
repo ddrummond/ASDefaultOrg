@@ -1,3 +1,4 @@
+
 view: ASAdventureSmall {
   label: "ASAdventureSmall"
   sql_table_name: "AdventureWorksDW2012Multidimensional-EE"."ASAdventureSmall";;
