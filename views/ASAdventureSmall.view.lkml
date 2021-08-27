@@ -1592,8 +1592,7 @@ view: ASAdventureSmall {
     dimension: StandardMonth_Month {
         label: "  Month"
         group_label: "StandardMonth"
-        type: date
-        allow_fill: no
+        type: date_month
         sql: ${TABLE}.`Month`;;
     }
 
