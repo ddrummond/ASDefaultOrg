@@ -1206,7 +1206,8 @@ view: ASAdventureSmall {
     dimension: ISO8601Week_ISO_8601_Week {
         label: "   ISO 8601 Week"
         group_label: "ISO8601Week"
-        type: date_week
+        type: date
+        allow_fill: no
         sql: ${TABLE}.`ISO 8601 Week`;;
         drill_fields: [ISO8601Week_ISO_8601_Day]
     }
