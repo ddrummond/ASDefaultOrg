@@ -1622,7 +1622,8 @@ view: ASAdventureSmall {
     dimension: StandardWeek_Week {
         label: "  Week"
         group_label: "StandardWeek"
-        type: date_week
+        type: date
+        allow_fill: no
         sql: ${TABLE}.`Week`;;
         drill_fields: [StandardWeek_Date]
     }
