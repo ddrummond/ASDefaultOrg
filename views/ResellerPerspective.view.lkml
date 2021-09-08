@@ -1,7 +1,6 @@
 view: ResellerPerspective {
   label: "ResellerPerspective"
   sql_table_name: "AdventureWorksDW2012Multidimensional-EE"."ResellerPerspective";;
-
   dimension: Business_Type2 {
     label: "Business Type2"
     type: string
@@ -878,14 +877,14 @@ view: ResellerPerspective {
   dimension: ISO8601Week_Due_ISO_8601_Day {
     label: "  Due.ISO 8601 Day"
     group_label: "Due.ISO8601Week"
-    type: string
+    type: date
     sql: ${TABLE}.`Due.ISO 8601 Day`;;
   }
 
   dimension: ISO8601Week_Due_ISO_8601_Week {
     label: "   Due.ISO 8601 Week"
     group_label: "Due.ISO8601Week"
-    type: string
+    type: date_week
     sql: ${TABLE}.`Due.ISO 8601 Week`;;
     drill_fields: [ISO8601Week_Due_ISO_8601_Day]
   }
@@ -893,7 +892,7 @@ view: ResellerPerspective {
   dimension: ISO8601Week_Due_ISO_8601_Year {
     label: "    Due.ISO 8601 Year"
     group_label: "Due.ISO8601Week"
-    type: string
+    type: date_year
     sql: ${TABLE}.`Due.ISO 8601 Year`;;
     drill_fields: [ISO8601Week_Due_ISO_8601_Week]
   }
@@ -905,18 +904,10 @@ view: ResellerPerspective {
     sql: ${TABLE}.`Due.Reporting Day`;;
   }
 
-  dimension: Retail445_Due_Reporting_Half_Year {
-    label: "      Due.Reporting Half Year"
-    group_label: "Due.Retail445"
-    type: string
-    sql: ${TABLE}.`Due.Reporting Half Year`;;
-    drill_fields: [Retail445_Due_Reporting_Quarter]
-  }
-
   dimension: Retail445_Due_Reporting_Month {
     label: "    Due.Reporting Month"
     group_label: "Due.Retail445"
-    type: string
+    type: date_month
     sql: ${TABLE}.`Due.Reporting Month`;;
     drill_fields: [Retail445_Due_Reporting_Week]
   }
@@ -924,7 +915,7 @@ view: ResellerPerspective {
   dimension: Retail445_Due_Reporting_Quarter {
     label: "     Due.Reporting Quarter"
     group_label: "Due.Retail445"
-    type: string
+    type: date_quarter
     sql: ${TABLE}.`Due.Reporting Quarter`;;
     drill_fields: [Retail445_Due_Reporting_Month]
   }
@@ -932,69 +923,53 @@ view: ResellerPerspective {
   dimension: Retail445_Due_Reporting_Week {
     label: "   Due.Reporting Week"
     group_label: "Due.Retail445"
-    type: string
+    type: date_week
     sql: ${TABLE}.`Due.Reporting Week`;;
     drill_fields: [Retail445_Due_Reporting_Day]
   }
 
   dimension: Retail445_Due_Reporting_Year {
-    label: "       Due.Reporting Year"
+    label: "      Due.Reporting Year"
     group_label: "Due.Retail445"
-    type: string
+    type: date_year
     sql: ${TABLE}.`Due.Reporting Year`;;
-    drill_fields: [Retail445_Due_Reporting_Half_Year]
-  }
-
-  dimension: StandardMonth_Due_Date {
-    label: " Due.Date"
-    group_label: "Due.StandardMonth"
-    type: number
-    sql: ${TABLE}.`Due.Date`;;
-  }
-
-  dimension: StandardMonth_Due_Half_Year {
-    label: "    Due.Half Year"
-    group_label: "Due.StandardMonth"
-    type: string
-    sql: ${TABLE}.`Due.Half Year`;;
-    drill_fields: [StandardMonth_Due_Quarter]
+    drill_fields: [Retail445_Due_Reporting_Quarter]
   }
 
   dimension: StandardMonth_Due_Month {
     label: "  Due.Month"
     group_label: "Due.StandardMonth"
-    type: string
+    type: date_month
     sql: ${TABLE}.`Due.Month`;;
-    drill_fields: [StandardMonth_Due_Date]
   }
 
   dimension: StandardMonth_Due_Quarter {
     label: "   Due.Quarter"
     group_label: "Due.StandardMonth"
-    type: string
+    type: date_quarter
     sql: ${TABLE}.`Due.Quarter`;;
     drill_fields: [StandardMonth_Due_Month]
   }
 
   dimension: StandardMonth_Due_Year {
-    label: "     Due.Year"
+    label: "    Due.Year"
     group_label: "Due.StandardMonth"
-    type: string
+    type: date_year
     sql: ${TABLE}.`Due.Year`;;
-    drill_fields: [StandardMonth_Due_Half_Year]
+    drill_fields: [StandardMonth_Due_Quarter]
   }
 
   dimension: StandardWeek_Due_Date {
     label: " Due.Date"
     group_label: "Due.StandardWeek"
-    type: number
+    type: date
     sql: ${TABLE}.`Due.Date`;;
   }
 
   dimension: StandardWeek_Due_Week {
     label: "  Due.Week"
     group_label: "Due.StandardWeek"
-    type: string
+    type: date_week
     sql: ${TABLE}.`Due.Week`;;
     drill_fields: [StandardWeek_Due_Date]
   }
@@ -1002,7 +977,7 @@ view: ResellerPerspective {
   dimension: StandardWeek_Due_Year {
     label: "   Due.Year"
     group_label: "Due.StandardWeek"
-    type: string
+    type: date_year
     sql: ${TABLE}.`Due.Year`;;
     drill_fields: [StandardWeek_Due_Week]
   }
@@ -1083,14 +1058,14 @@ view: ResellerPerspective {
   dimension: ISO8601Week_ISO_8601_Day {
     label: "  ISO 8601 Day"
     group_label: "ISO8601Week"
-    type: string
+    type: date
     sql: ${TABLE}.`ISO 8601 Day`;;
   }
 
   dimension: ISO8601Week_ISO_8601_Week {
     label: "   ISO 8601 Week"
     group_label: "ISO8601Week"
-    type: string
+    type: date_week
     sql: ${TABLE}.`ISO 8601 Week`;;
     drill_fields: [ISO8601Week_ISO_8601_Day]
   }
@@ -1098,7 +1073,7 @@ view: ResellerPerspective {
   dimension: ISO8601Week_ISO_8601_Year {
     label: "    ISO 8601 Year"
     group_label: "ISO8601Week"
-    type: string
+    type: date_year
     sql: ${TABLE}.`ISO 8601 Year`;;
     drill_fields: [ISO8601Week_ISO_8601_Week]
   }
@@ -1251,18 +1226,10 @@ view: ResellerPerspective {
     sql: ${TABLE}.`Reporting Day`;;
   }
 
-  dimension: Retail445_Reporting_Half_Year {
-    label: "      Reporting Half Year"
-    group_label: "Retail445"
-    type: string
-    sql: ${TABLE}.`Reporting Half Year`;;
-    drill_fields: [Retail445_Reporting_Quarter]
-  }
-
   dimension: Retail445_Reporting_Month {
     label: "    Reporting Month"
     group_label: "Retail445"
-    type: string
+    type: date_month
     sql: ${TABLE}.`Reporting Month`;;
     drill_fields: [Retail445_Reporting_Week]
   }
@@ -1270,7 +1237,7 @@ view: ResellerPerspective {
   dimension: Retail445_Reporting_Quarter {
     label: "     Reporting Quarter"
     group_label: "Retail445"
-    type: string
+    type: date_quarter
     sql: ${TABLE}.`Reporting Quarter`;;
     drill_fields: [Retail445_Reporting_Month]
   }
@@ -1278,17 +1245,17 @@ view: ResellerPerspective {
   dimension: Retail445_Reporting_Week {
     label: "   Reporting Week"
     group_label: "Retail445"
-    type: string
+    type: date_week
     sql: ${TABLE}.`Reporting Week`;;
     drill_fields: [Retail445_Reporting_Day]
   }
 
   dimension: Retail445_Reporting_Year {
-    label: "       Reporting Year"
+    label: "      Reporting Year"
     group_label: "Retail445"
-    type: string
+    type: date_year
     sql: ${TABLE}.`Reporting Year`;;
-    drill_fields: [Retail445_Reporting_Half_Year]
+    drill_fields: [Retail445_Reporting_Quarter]
   }
 
   dimension: Annual_Revenue {
@@ -1308,14 +1275,14 @@ view: ResellerPerspective {
   dimension: ISO8601Week_Ship_ISO_8601_Day {
     label: "  Ship.ISO 8601 Day"
     group_label: "Ship.ISO8601Week"
-    type: string
+    type: date
     sql: ${TABLE}.`Ship.ISO 8601 Day`;;
   }
 
   dimension: ISO8601Week_Ship_ISO_8601_Week {
     label: "   Ship.ISO 8601 Week"
     group_label: "Ship.ISO8601Week"
-    type: string
+    type: date_week
     sql: ${TABLE}.`Ship.ISO 8601 Week`;;
     drill_fields: [ISO8601Week_Ship_ISO_8601_Day]
   }
@@ -1323,7 +1290,7 @@ view: ResellerPerspective {
   dimension: ISO8601Week_Ship_ISO_8601_Year {
     label: "    Ship.ISO 8601 Year"
     group_label: "Ship.ISO8601Week"
-    type: string
+    type: date_year
     sql: ${TABLE}.`Ship.ISO 8601 Year`;;
     drill_fields: [ISO8601Week_Ship_ISO_8601_Week]
   }
@@ -1335,18 +1302,10 @@ view: ResellerPerspective {
     sql: ${TABLE}.`Ship.Reporting Day`;;
   }
 
-  dimension: Retail445_Ship_Reporting_Half_Year {
-    label: "      Ship.Reporting Half Year"
-    group_label: "Ship.Retail445"
-    type: string
-    sql: ${TABLE}.`Ship.Reporting Half Year`;;
-    drill_fields: [Retail445_Ship_Reporting_Quarter]
-  }
-
   dimension: Retail445_Ship_Reporting_Month {
     label: "    Ship.Reporting Month"
     group_label: "Ship.Retail445"
-    type: string
+    type: date_month
     sql: ${TABLE}.`Ship.Reporting Month`;;
     drill_fields: [Retail445_Ship_Reporting_Week]
   }
@@ -1354,7 +1313,7 @@ view: ResellerPerspective {
   dimension: Retail445_Ship_Reporting_Quarter {
     label: "     Ship.Reporting Quarter"
     group_label: "Ship.Retail445"
-    type: string
+    type: date_quarter
     sql: ${TABLE}.`Ship.Reporting Quarter`;;
     drill_fields: [Retail445_Ship_Reporting_Month]
   }
@@ -1362,69 +1321,53 @@ view: ResellerPerspective {
   dimension: Retail445_Ship_Reporting_Week {
     label: "   Ship.Reporting Week"
     group_label: "Ship.Retail445"
-    type: string
+    type: date_week
     sql: ${TABLE}.`Ship.Reporting Week`;;
     drill_fields: [Retail445_Ship_Reporting_Day]
   }
 
   dimension: Retail445_Ship_Reporting_Year {
-    label: "       Ship.Reporting Year"
+    label: "      Ship.Reporting Year"
     group_label: "Ship.Retail445"
-    type: string
+    type: date_year
     sql: ${TABLE}.`Ship.Reporting Year`;;
-    drill_fields: [Retail445_Ship_Reporting_Half_Year]
-  }
-
-  dimension: StandardMonth_Ship_Date {
-    label: " Ship.Date"
-    group_label: "Ship.StandardMonth"
-    type: number
-    sql: ${TABLE}.`Ship.Date`;;
-  }
-
-  dimension: StandardMonth_Ship_Half_Year {
-    label: "    Ship.Half Year"
-    group_label: "Ship.StandardMonth"
-    type: string
-    sql: ${TABLE}.`Ship.Half Year`;;
-    drill_fields: [StandardMonth_Ship_Quarter]
+    drill_fields: [Retail445_Ship_Reporting_Quarter]
   }
 
   dimension: StandardMonth_Ship_Month {
     label: "  Ship.Month"
     group_label: "Ship.StandardMonth"
-    type: string
+    type: date_month
     sql: ${TABLE}.`Ship.Month`;;
-    drill_fields: [StandardMonth_Ship_Date]
   }
 
   dimension: StandardMonth_Ship_Quarter {
     label: "   Ship.Quarter"
     group_label: "Ship.StandardMonth"
-    type: string
+    type: date_quarter
     sql: ${TABLE}.`Ship.Quarter`;;
     drill_fields: [StandardMonth_Ship_Month]
   }
 
   dimension: StandardMonth_Ship_Year {
-    label: "     Ship.Year"
+    label: "    Ship.Year"
     group_label: "Ship.StandardMonth"
-    type: string
+    type: date_year
     sql: ${TABLE}.`Ship.Year`;;
-    drill_fields: [StandardMonth_Ship_Half_Year]
+    drill_fields: [StandardMonth_Ship_Quarter]
   }
 
   dimension: StandardWeek_Ship_Date {
     label: " Ship.Date"
     group_label: "Ship.StandardWeek"
-    type: number
+    type: date
     sql: ${TABLE}.`Ship.Date`;;
   }
 
   dimension: StandardWeek_Ship_Week {
     label: "  Ship.Week"
     group_label: "Ship.StandardWeek"
-    type: string
+    type: date_week
     sql: ${TABLE}.`Ship.Week`;;
     drill_fields: [StandardWeek_Ship_Date]
   }
@@ -1432,61 +1375,45 @@ view: ResellerPerspective {
   dimension: StandardWeek_Ship_Year {
     label: "   Ship.Year"
     group_label: "Ship.StandardWeek"
-    type: string
+    type: date_year
     sql: ${TABLE}.`Ship.Year`;;
     drill_fields: [StandardWeek_Ship_Week]
-  }
-
-  dimension: StandardMonth_Date {
-    label: " Date"
-    group_label: "StandardMonth"
-    type: number
-    sql: ${TABLE}.`Date`;;
-  }
-
-  dimension: StandardMonth_Half_Year {
-    label: "    Half Year"
-    group_label: "StandardMonth"
-    type: string
-    sql: ${TABLE}.`Half Year`;;
-    drill_fields: [StandardMonth_Quarter]
   }
 
   dimension: StandardMonth_Month {
     label: "  Month"
     group_label: "StandardMonth"
-    type: string
+    type: date_month
     sql: ${TABLE}.`Month`;;
-    drill_fields: [StandardMonth_Date]
   }
 
   dimension: StandardMonth_Quarter {
     label: "   Quarter"
     group_label: "StandardMonth"
-    type: string
+    type: date_quarter
     sql: ${TABLE}.`Quarter`;;
     drill_fields: [StandardMonth_Month]
   }
 
   dimension: StandardMonth_Year {
-    label: "     Year"
+    label: "    Year"
     group_label: "StandardMonth"
-    type: string
+    type: date_year
     sql: ${TABLE}.`Year`;;
-    drill_fields: [StandardMonth_Half_Year]
+    drill_fields: [StandardMonth_Quarter]
   }
 
   dimension: StandardWeek_Date {
     label: " Date"
     group_label: "StandardWeek"
-    type: number
+    type: date
     sql: ${TABLE}.`Date`;;
   }
 
   dimension: StandardWeek_Week {
     label: "  Week"
     group_label: "StandardWeek"
-    type: string
+    type: date_week
     sql: ${TABLE}.`Week`;;
     drill_fields: [StandardWeek_Date]
   }
@@ -1494,7 +1421,7 @@ view: ResellerPerspective {
   dimension: StandardWeek_Year {
     label: "   Year"
     group_label: "StandardWeek"
-    type: string
+    type: date_year
     sql: ${TABLE}.`Year`;;
     drill_fields: [StandardWeek_Week]
   }
@@ -1569,6 +1496,7 @@ view: ResellerPerspective {
     sql: ${TABLE}.`Safety Stock Level`;;
     drill_fields: [Stock_Level_Product]
   }
+
 
   measure: QTD_ISA {
     label: "QTD-ISA"
@@ -1654,9 +1582,7 @@ view: ResellerPerspective {
     fields: [Color,List_Price,Size,Weight,Model_Name,Reseller_Sales_Amount_Local]
   }
 
-#
-# To avoid merge conflicts, put your non-AtScale customizations below
-# BEGIN CUSTOMIZATIONS
-# END CUSTOMIZATIONS
-#
+  # To avoid merge conflicts, put your non-AtScale customizations below
+  # BEGIN CUSTOMIZATIONS
+  # END CUSTOMIZATIONS
 }
