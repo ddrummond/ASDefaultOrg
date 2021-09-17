@@ -2076,7 +2076,4 @@ view: ASAdventureSmall {
     fields: [Color,List_Price,Size,Weight,Model_Name,Reseller_Sales_Amount_Local]
   }
 
-  # To avoid merge conflicts, put your non-AtScale customizations below
-  # BEGIN CUSTOMIZATIONS
-  # END CUSTOMIZATIONS
 }
