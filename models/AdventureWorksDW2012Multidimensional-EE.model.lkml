@@ -1,6 +1,9 @@
 connection: "bitool1"
 
-include: "/views/*.view.lkml"                # include all views in the views/ folder in this project
+include: "/views/AdventureWorksDW2012Multidimensional-EE/ASAdventureSmall.view.lkml"
+include: "/views/AdventureWorksDW2012Multidimensional-EE/ResellerPerspective.view.lkml"
+
+#include: "/views/*.view.lkml"                # include all views in the views/ folder in this project
 # include: "/**/*.view.lkml"                 # include all views in this project
 # include: "my_dashboard.dashboard.lookml"   # include a LookML dashboard called my_dashboard
 
@@ -16,10 +19,6 @@ label: "AdventureWorksDW2012Multidimensional-EE"
 
 explore: ASAdventureSmall {
   label: "ASAdventureSmall"
-}
-
-explore: ASASDefaultMembers {
-  label: "ASASDefaultMembers"
 }
 
 explore: ResellerPerspective {
