@@ -1,6 +1,6 @@
-view: ASAdventureSmall {
-    label: "ASAdventureSmall"
-    sql_table_name: "AdventureWorksDW2012Multidimensional-EE"."ASAdventureSmall";;
+view: ASASDefaultMembers {
+    label: "ASASDefaultMembers"
+    sql_table_name: "AdventureWorksDW2012Multidimensional-EE"."ASASDefaultMembers";;
     dimension: Account_Description {
         label: "Account Description"
         type: string
@@ -1480,6 +1480,29 @@ view: ASAdventureSmall {
         drill_fields: [Sales_Reasons_Dim_Sales_Reason]
     }
 
+    dimension: Sales_Territory_Hierarchy_Sales_Territory_Country {
+        label: "  Sales Territory Country"
+        group_label: "Sales Territory Hierarchy"
+        type: string
+        sql: ${TABLE}.`Sales Territory Country`;;
+        drill_fields: [Sales_Territory_Hierarchy_Sales_Territory_Region]
+    }
+
+    dimension: Sales_Territory_Hierarchy_Sales_Territory_Group {
+        label: "   Sales Territory Group"
+        group_label: "Sales Territory Hierarchy"
+        type: string
+        sql: ${TABLE}.`Sales Territory Group`;;
+        drill_fields: [Sales_Territory_Hierarchy_Sales_Territory_Country]
+    }
+
+    dimension: Sales_Territory_Hierarchy_Sales_Territory_Region {
+        label: " Sales Territory Region"
+        group_label: "Sales Territory Hierarchy"
+        type: string
+        sql: ${TABLE}.`Sales Territory Region`;;
+    }
+
     dimension: ISO8601Week_Ship_ISO_8601_Day {
         label: "  Ship.ISO 8601 Day"
         group_label: "Ship.ISO8601Week"
@@ -1706,10 +1729,10 @@ view: ASAdventureSmall {
     }
 
 
-    measure: QTD_ISA {
-        label: "QTD-ISA"
+    measure: QTD_ISA2 {
+        label: "QTD-ISA2"
         type: average
-        sql: ${TABLE}.`QTD-ISA`;;
+        sql: ${TABLE}.`QTD-ISA2`;;
     }
 
     measure: Balance {
@@ -1722,7 +1745,7 @@ view: ASAdventureSmall {
     measure: Internet_Order_Count {
         label: "Internet Order Count"
         group_label: "InternetSales"
-        description: "URDH = Empty Cells"
+        description: "URDH = Empty Cells."
         value_format: "#,##0"
         type: count_distinct
         sql: ${TABLE}.`Internet Order Count`;;
@@ -1765,7 +1788,7 @@ view: ASAdventureSmall {
     measure: Reseller_Order_Quantity_Long {
         label: "Reseller Order Quantity Long"
         group_label: "ResellerSales"
-        description: "URDH = Empty Cells"
+        description: "URDH = Empty Cells."
         value_format: "#,##0"
         type: sum
         sql: ${TABLE}.`Reseller Order Quantity Long`;;
@@ -1774,7 +1797,7 @@ view: ASAdventureSmall {
     measure: Reseller_Sales_Amount_Local {
         label: "Reseller Sales Amount Local"
         group_label: "ResellerSales"
-        description: "URDH = Empty Cells"
+        description: "URDH = Empty Cells."
         value_format: "#,##0.00"
         drill_fields: [ResellerDetails*,ResellerProductDetails*]
         type: sum
