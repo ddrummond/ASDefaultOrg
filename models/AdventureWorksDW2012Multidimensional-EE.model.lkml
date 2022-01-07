@@ -17,11 +17,3 @@ label: "AdventureWorksDW2012Multidimensional-EE"
 explore: ASAdventureSmall {
   label: "ASAdventureSmall"
 }
-
-explore: ASASDefaultMembers {
-  label: "ASASDefaultMembers"
-}
-
-explore: ResellerPerspective {
-  label: "ResellerPerspective"
-}
