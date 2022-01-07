@@ -1,8 +1,9 @@
-view: ASAdventureSmall {
+view: DirectTest {
   label: "Test"
   sql_table_name: `as_adventure`.`t4`;;
   dimension: category {
     label: "category"
+    primary_key: yes
     type: string
     sql: ${TABLE}.`category`;;
   }

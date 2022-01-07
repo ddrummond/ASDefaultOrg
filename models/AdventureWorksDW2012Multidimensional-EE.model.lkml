@@ -14,6 +14,6 @@ include: "/views/*.view.lkml"                # include all views in the views/ f
 
 label: "AdventureWorksDW2012Multidimensional-EE"
 
-explore: ASAdventureSmall {
-  label: "ASAdventureSmall"
+explore: DirectTest {
+  label: "DirectTest"
 }
