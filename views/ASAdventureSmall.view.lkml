@@ -1,24 +1,24 @@
 view: ASAdventureSmall {
   label: "Test"
-  sql_table_name: `as_adventure`.`t3`;;
-  dimension: ProductLine {
-    label: "ProductLine"
+  sql_table_name: `as_adventure`.`t4`;;
+  dimension: category {
+    label: "category"
     type: string
-    sql: ${TABLE}.`ProductLine`;;
+    sql: ${TABLE}.`category`;;
   }
 
-  dimension: ProductSubCategory {
-    label: "ProductSubCategory"
+  dimension: subcategory {
+    label: "subcategory"
     type: string
-    sql: ${TABLE}.`ProductSubCategory`;;
+    sql: ${TABLE}.`subcategory`;;
   }
 
 
-  measure: OQ {
-    label: "OQ"
+  measure: amount {
+    label: "amount"
     group_label: "Tuple"
     type: sum
-    sql: ${TABLE}.`OQ`;;
+    sql: ${TABLE}.`amount`;;
   }
 
 
