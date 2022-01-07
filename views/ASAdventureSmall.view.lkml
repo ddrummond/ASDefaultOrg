@@ -1,9 +1,8 @@
 view: DirectTest {
   label: "Test"
-  sql_table_name: `as_adventure`.`t4`;;
+  sql_table_name: `test`.`test`;;
   dimension: category {
     label: "category"
-    primary_key: yes
     type: string
     sql: ${TABLE}.`category`;;
   }
@@ -17,7 +16,7 @@ view: DirectTest {
 
   measure: amount {
     label: "amount"
-    group_label: "Tuple"
+    group_label: "Stuff"
     type: sum
     sql: ${TABLE}.`amount`;;
   }
