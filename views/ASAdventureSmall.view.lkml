@@ -1,6 +1,6 @@
 view: ASAdventureSmall {
   label: "Test"
-  sql_table_name: "as_adventure"."t3";;
+  sql_table_name: `as_adventure`.`t3`;;
   dimension: ProductLine {
     label: "ProductLine"
     type: string
