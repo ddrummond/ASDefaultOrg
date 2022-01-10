@@ -1048,6 +1048,7 @@ view: ASAdventureSmall {
     label: "      Due.Reporting Half Year"
     group_label: "Due.Retail445"
     type: string
+
     sql: ${TABLE}.`Due.Reporting Half Year`;;
     drill_fields: [Retail445_Due_Reporting_Quarter]
   }
@@ -1095,6 +1096,7 @@ view: ASAdventureSmall {
     label: "    Due.Half Year"
     group_label: "Due.StandardMonth"
     type: string
+
     sql: ${TABLE}.`Due.Half Year`;;
     drill_fields: [StandardMonth_Due_Quarter]
   }
@@ -1447,6 +1449,7 @@ view: ASAdventureSmall {
     label: "      Reporting Half Year"
     group_label: "Retail445"
     type: string
+
     sql: ${TABLE}.`Reporting Half Year`;;
     drill_fields: [Retail445_Reporting_Quarter]
   }
@@ -1546,6 +1549,7 @@ view: ASAdventureSmall {
     label: "      Ship.Reporting Half Year"
     group_label: "Ship.Retail445"
     type: string
+
     sql: ${TABLE}.`Ship.Reporting Half Year`;;
     drill_fields: [Retail445_Ship_Reporting_Quarter]
   }
@@ -1593,6 +1597,7 @@ view: ASAdventureSmall {
     label: "    Ship.Half Year"
     group_label: "Ship.StandardMonth"
     type: string
+
     sql: ${TABLE}.`Ship.Half Year`;;
     drill_fields: [StandardMonth_Ship_Quarter]
   }
@@ -1655,6 +1660,7 @@ view: ASAdventureSmall {
     label: "    Half Year"
     group_label: "StandardMonth"
     type: string
+
     sql: ${TABLE}.`Half Year`;;
     drill_fields: [StandardMonth_Quarter]
   }
