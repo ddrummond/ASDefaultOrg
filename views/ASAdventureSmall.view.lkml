@@ -10,7 +10,8 @@ view: DirectTest {
   dimension: subcategory {
     label: "subcategory"
     type: string
-    sql: ${TABLE}.`subcategory`;;
+    sql: ${TABLE}.`subcategory`
+    drill_fields: [subcategory];;
   }
 
 
