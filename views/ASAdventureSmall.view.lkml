@@ -5,13 +5,13 @@ view: DirectTest {
     label: "category"
     type: string
     sql: ${TABLE}.`category`;;
+    drill_fields: [subcategory]
   }
 
   dimension: subcategory {
     label: "subcategory"
     type: string
-    sql: ${TABLE}.`subcategory`
-    drill_fields: [subcategory];;
+    sql: ${TABLE}.`subcategory`;;
   }
 
 
