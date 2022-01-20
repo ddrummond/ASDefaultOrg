@@ -14,6 +14,7 @@ include: "/views/*.view.lkml"                # include all views in the views/ f
 
 label: "AdventureWorksDW2012Multidimensional-EE"
 
+
 explore: DirectTest {
   label: "DirectTest"
 }
