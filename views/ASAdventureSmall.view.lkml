@@ -14,6 +14,11 @@ view: DirectTest {
     sql: ${TABLE}.`subcategory`;;
   }
 
+  dimension: botcategory {
+    label: "botcategory"
+    type: string
+    sql: ${TABLE}.`botcategory`;;
+  }
 
   measure: amount {
     label: "amount"
