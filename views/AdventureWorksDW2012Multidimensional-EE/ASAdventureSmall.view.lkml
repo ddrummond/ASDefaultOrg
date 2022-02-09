@@ -1826,6 +1826,13 @@ view: ASAdventureSmall {
         sql: ${TABLE}.`DDTestYTDCount`;;
     }
 
+    measure: m_freight_sum {
+        label: "Freight"
+        group_label: "DDTest"
+        type: sum
+        sql: ${TABLE}.`m_freight_sum`;;
+    }
+
     measure: m_taxamt_sum {
         label: "TaxSum"
         group_label: "DDTest"
