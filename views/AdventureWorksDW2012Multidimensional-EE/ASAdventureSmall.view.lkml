@@ -1833,6 +1833,13 @@ view: ASAdventureSmall {
         sql: ${TABLE}.`m_taxamt_sum`;;
     }
 
+    measure: m_totalproductcost_sum {
+        label: "TotalProductCost"
+        group_label: "DDTest"
+        type: sum
+        sql: ${TABLE}.`m_totalproductcost_sum`;;
+    }
+
     measure: m_unitprice_count {
         label: "UnitPriceCount"
         group_label: "DDTest"
