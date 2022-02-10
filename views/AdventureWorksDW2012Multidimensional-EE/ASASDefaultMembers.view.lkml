@@ -1047,7 +1047,7 @@ view: ASASDefaultMembers {
     dimension: Retail445_Due_Reporting_Half_Year {
         label: "      Due.Reporting Half Year"
         group_label: "Due.Retail445"
-        type: string
+        type: date_time
         allow_fill: no
         sql: ${TABLE}.`Due.Reporting Half Year`;;
         drill_fields: [Retail445_Due_Reporting_Quarter]
@@ -1448,7 +1448,7 @@ view: ASASDefaultMembers {
     dimension: Retail445_Reporting_Half_Year {
         label: "      Reporting Half Year"
         group_label: "Retail445"
-        type: string
+        type: date_time
         allow_fill: no
         sql: ${TABLE}.`Reporting Half Year`;;
         drill_fields: [Retail445_Reporting_Quarter]
@@ -1571,7 +1571,7 @@ view: ASASDefaultMembers {
     dimension: Retail445_Ship_Reporting_Half_Year {
         label: "      Ship.Reporting Half Year"
         group_label: "Ship.Retail445"
-        type: string
+        type: date_time
         allow_fill: no
         sql: ${TABLE}.`Ship.Reporting Half Year`;;
         drill_fields: [Retail445_Ship_Reporting_Quarter]
