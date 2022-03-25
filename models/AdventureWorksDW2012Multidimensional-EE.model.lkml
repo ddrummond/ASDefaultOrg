@@ -8,7 +8,7 @@
 # Project: AdventureWorksDW2012Multidimensional-EE
 
 connection: "bitool1"
-label: "AdventureWorksDW2012Multidimensional-EE"
+label: "AdventureWorksDW2012Multidimensional-EE2"
 
 
 include: "/views/ASAdventureSmall.view.lkml"
