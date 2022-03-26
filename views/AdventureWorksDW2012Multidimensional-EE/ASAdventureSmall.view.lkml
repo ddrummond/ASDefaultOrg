@@ -1,6 +1,6 @@
-view: ASASDefaultMembers {
-  label: "ASASDefaultMembers"
-  sql_table_name: "AdventureWorksDW2012Multidimensional-EE"."ASASDefaultMembers";;
+view: ASAdventureSmall {
+  label: "ASAdventureSmall"
+  sql_table_name: "AdventureWorksDW2012Multidimensional-EE"."ASAdventureSmall";;
   dimension: Account_Description {
     label: "Account Description"
     type: string
@@ -1044,6 +1044,15 @@ view: ASASDefaultMembers {
     sql: ${TABLE}.`Due.Reporting Day`;;
   }
 
+  dimension: Retail445_Due_Reporting_Half_Year {
+    label: "      Due.Reporting Half Year"
+    group_label: "Due.Retail445"
+    type: string
+
+    sql: ${TABLE}.`Due.Reporting Half Year`;;
+    drill_fields: [Retail445_Due_Reporting_Quarter]
+  }
+
   dimension: Retail445_Due_Reporting_Month {
     label: "    Due.Reporting Month"
     group_label: "Due.Retail445"
@@ -1069,11 +1078,27 @@ view: ASASDefaultMembers {
   }
 
   dimension: Retail445_Due_Reporting_Year {
-    label: "      Due.Reporting Year"
+    label: "       Due.Reporting Year"
     group_label: "Due.Retail445"
     type: date_year
     sql: ${TABLE}.`Due.Reporting Year`;;
-    drill_fields: [Retail445_Due_Reporting_Quarter]
+    drill_fields: [Retail445_Due_Reporting_Half_Year]
+  }
+
+  dimension: StandardMonth_Due_Date {
+    label: " Due.Date"
+    group_label: "Due.StandardMonth"
+    type: date
+    sql: ${TABLE}.`Due.Date`;;
+  }
+
+  dimension: StandardMonth_Due_Half_Year {
+    label: "    Due.Half Year"
+    group_label: "Due.StandardMonth"
+    type: string
+
+    sql: ${TABLE}.`Due.Half Year`;;
+    drill_fields: [StandardMonth_Due_Quarter]
   }
 
   dimension: StandardMonth_Due_Month {
@@ -1081,6 +1106,7 @@ view: ASASDefaultMembers {
     group_label: "Due.StandardMonth"
     type: date_month
     sql: ${TABLE}.`Due.Month`;;
+    drill_fields: [StandardMonth_Due_Date]
   }
 
   dimension: StandardMonth_Due_Quarter {
@@ -1092,11 +1118,11 @@ view: ASASDefaultMembers {
   }
 
   dimension: StandardMonth_Due_Year {
-    label: "    Due.Year"
+    label: "     Due.Year"
     group_label: "Due.StandardMonth"
     type: date_year
     sql: ${TABLE}.`Due.Year`;;
-    drill_fields: [StandardMonth_Due_Quarter]
+    drill_fields: [StandardMonth_Due_Half_Year]
   }
 
   dimension: StandardWeek_Due_Date {
@@ -1419,6 +1445,15 @@ view: ASASDefaultMembers {
     sql: ${TABLE}.`Reporting Day`;;
   }
 
+  dimension: Retail445_Reporting_Half_Year {
+    label: "      Reporting Half Year"
+    group_label: "Retail445"
+    type: string
+
+    sql: ${TABLE}.`Reporting Half Year`;;
+    drill_fields: [Retail445_Reporting_Quarter]
+  }
+
   dimension: Retail445_Reporting_Month {
     label: "    Reporting Month"
     group_label: "Retail445"
@@ -1444,11 +1479,11 @@ view: ASASDefaultMembers {
   }
 
   dimension: Retail445_Reporting_Year {
-    label: "      Reporting Year"
+    label: "       Reporting Year"
     group_label: "Retail445"
     type: date_year
     sql: ${TABLE}.`Reporting Year`;;
-    drill_fields: [Retail445_Reporting_Quarter]
+    drill_fields: [Retail445_Reporting_Half_Year]
   }
 
   dimension: Annual_Revenue {
@@ -1478,29 +1513,6 @@ view: ASASDefaultMembers {
     type: string
     sql: ${TABLE}.`Sales Reason Reason Type`;;
     drill_fields: [Sales_Reasons_Dim_Sales_Reason]
-  }
-
-  dimension: Sales_Territory_Hierarchy_Sales_Territory_Country {
-    label: "  Sales Territory Country"
-    group_label: "Sales Territory Hierarchy"
-    type: string
-    sql: ${TABLE}.`Sales Territory Country`;;
-    drill_fields: [Sales_Territory_Hierarchy_Sales_Territory_Region]
-  }
-
-  dimension: Sales_Territory_Hierarchy_Sales_Territory_Group {
-    label: "   Sales Territory Group"
-    group_label: "Sales Territory Hierarchy"
-    type: string
-    sql: ${TABLE}.`Sales Territory Group`;;
-    drill_fields: [Sales_Territory_Hierarchy_Sales_Territory_Country]
-  }
-
-  dimension: Sales_Territory_Hierarchy_Sales_Territory_Region {
-    label: " Sales Territory Region"
-    group_label: "Sales Territory Hierarchy"
-    type: string
-    sql: ${TABLE}.`Sales Territory Region`;;
   }
 
   dimension: ISO8601Week_Ship_ISO_8601_Day {
@@ -1533,6 +1545,15 @@ view: ASASDefaultMembers {
     sql: ${TABLE}.`Ship.Reporting Day`;;
   }
 
+  dimension: Retail445_Ship_Reporting_Half_Year {
+    label: "      Ship.Reporting Half Year"
+    group_label: "Ship.Retail445"
+    type: string
+
+    sql: ${TABLE}.`Ship.Reporting Half Year`;;
+    drill_fields: [Retail445_Ship_Reporting_Quarter]
+  }
+
   dimension: Retail445_Ship_Reporting_Month {
     label: "    Ship.Reporting Month"
     group_label: "Ship.Retail445"
@@ -1558,11 +1579,27 @@ view: ASASDefaultMembers {
   }
 
   dimension: Retail445_Ship_Reporting_Year {
-    label: "      Ship.Reporting Year"
+    label: "       Ship.Reporting Year"
     group_label: "Ship.Retail445"
     type: date_year
     sql: ${TABLE}.`Ship.Reporting Year`;;
-    drill_fields: [Retail445_Ship_Reporting_Quarter]
+    drill_fields: [Retail445_Ship_Reporting_Half_Year]
+  }
+
+  dimension: StandardMonth_Ship_Date {
+    label: " Ship.Date"
+    group_label: "Ship.StandardMonth"
+    type: date
+    sql: ${TABLE}.`Ship.Date`;;
+  }
+
+  dimension: StandardMonth_Ship_Half_Year {
+    label: "    Ship.Half Year"
+    group_label: "Ship.StandardMonth"
+    type: string
+
+    sql: ${TABLE}.`Ship.Half Year`;;
+    drill_fields: [StandardMonth_Ship_Quarter]
   }
 
   dimension: StandardMonth_Ship_Month {
@@ -1570,6 +1607,7 @@ view: ASASDefaultMembers {
     group_label: "Ship.StandardMonth"
     type: date_month
     sql: ${TABLE}.`Ship.Month`;;
+    drill_fields: [StandardMonth_Ship_Date]
   }
 
   dimension: StandardMonth_Ship_Quarter {
@@ -1581,11 +1619,11 @@ view: ASASDefaultMembers {
   }
 
   dimension: StandardMonth_Ship_Year {
-    label: "    Ship.Year"
+    label: "     Ship.Year"
     group_label: "Ship.StandardMonth"
     type: date_year
     sql: ${TABLE}.`Ship.Year`;;
-    drill_fields: [StandardMonth_Ship_Quarter]
+    drill_fields: [StandardMonth_Ship_Half_Year]
   }
 
   dimension: StandardWeek_Ship_Date {
@@ -1611,11 +1649,28 @@ view: ASASDefaultMembers {
     drill_fields: [StandardWeek_Ship_Week]
   }
 
+  dimension: StandardMonth_Date {
+    label: " Date"
+    group_label: "StandardMonth"
+    type: date
+    sql: ${TABLE}.`Date`;;
+  }
+
+  dimension: StandardMonth_Half_Year {
+    label: "    Half Year"
+    group_label: "StandardMonth"
+    type: string
+
+    sql: ${TABLE}.`Half Year`;;
+    drill_fields: [StandardMonth_Quarter]
+  }
+
   dimension: StandardMonth_Month {
     label: "  Month"
     group_label: "StandardMonth"
     type: date_month
     sql: ${TABLE}.`Month`;;
+    drill_fields: [StandardMonth_Date]
   }
 
   dimension: StandardMonth_Quarter {
@@ -1627,11 +1682,11 @@ view: ASASDefaultMembers {
   }
 
   dimension: StandardMonth_Year {
-    label: "    Year"
+    label: "     Year"
     group_label: "StandardMonth"
     type: date_year
     sql: ${TABLE}.`Year`;;
-    drill_fields: [StandardMonth_Quarter]
+    drill_fields: [StandardMonth_Half_Year]
   }
 
   dimension: StandardWeek_Date {
@@ -1729,10 +1784,10 @@ view: ASASDefaultMembers {
   }
 
 
-  measure: QTD_ISA2 {
-    label: "QTD-ISA2"
+  measure: QTD_ISA {
+    label: "QTD-ISA"
     type: average
-    sql: ${TABLE}.`QTD-ISA2`;;
+    sql: ${TABLE}.`QTD-ISA`;;
   }
 
   measure: Balance {
@@ -1745,7 +1800,7 @@ view: ASASDefaultMembers {
   measure: Internet_Order_Count {
     label: "Internet Order Count"
     group_label: "InternetSales"
-    description: "URDH = Empty Cells."
+    description: "URDH = Empty Cells"
     value_format: "#,##0"
     type: count_distinct
     sql: ${TABLE}.`Internet Order Count`;;
@@ -1788,7 +1843,7 @@ view: ASASDefaultMembers {
   measure: Reseller_Order_Quantity_Long {
     label: "Reseller Order Quantity Long"
     group_label: "ResellerSales"
-    description: "URDH = Empty Cells."
+    description: "URDH = Empty Cells"
     value_format: "#,##0"
     type: sum
     sql: ${TABLE}.`Reseller Order Quantity Long`;;
@@ -1797,7 +1852,7 @@ view: ASASDefaultMembers {
   measure: Reseller_Sales_Amount_Local {
     label: "Reseller Sales Amount Local"
     group_label: "ResellerSales"
-    description: "URDH = Empty Cells."
+    description: "URDH = Empty Cells"
     value_format: "#,##0.00"
     drill_fields: [ResellerDetails*,ResellerProductDetails*]
     type: sum
@@ -2099,7 +2154,4 @@ view: ASASDefaultMembers {
     fields: [Color,List_Price,Size,Weight,Model_Name,Reseller_Sales_Amount_Local]
   }
 
-  # To avoid merge conflicts, put your non-AtScale customizations below
-  # BEGIN CUSTOMIZATIONS
-  # END CUSTOMIZATIONS
 }

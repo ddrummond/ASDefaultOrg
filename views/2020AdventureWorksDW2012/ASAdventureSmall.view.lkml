@@ -1,6 +1,6 @@
 view: ASAdventureSmall {
   label: "ASAdventureSmall"
-  sql_table_name: "AdventureWorksDW2012Multidimensional-EE"."ASAdventureSmall";;
+  sql_table_name: "2020AdventureWorksDW2012"."ASAdventureSmall";;
   dimension: Account_Description {
     label: "Account Description"
     type: string
@@ -1044,14 +1044,6 @@ view: ASAdventureSmall {
     sql: ${TABLE}.`Due.Reporting Day`;;
   }
 
-  dimension: Retail445_Due_Reporting_Half_Year {
-    label: "      Due.Reporting Half Year"
-    group_label: "Due.Retail445"
-    type: date_time
-    sql: ${TABLE}.`Due.Reporting Half Year`;;
-    drill_fields: [Retail445_Due_Reporting_Quarter]
-  }
-
   dimension: Retail445_Due_Reporting_Month {
     label: "    Due.Reporting Month"
     group_label: "Due.Retail445"
@@ -1077,26 +1069,11 @@ view: ASAdventureSmall {
   }
 
   dimension: Retail445_Due_Reporting_Year {
-    label: "       Due.Reporting Year"
+    label: "      Due.Reporting Year"
     group_label: "Due.Retail445"
     type: date_year
     sql: ${TABLE}.`Due.Reporting Year`;;
-    drill_fields: [Retail445_Due_Reporting_Half_Year]
-  }
-
-  dimension: StandardMonth_Due_Date {
-    label: " Due.Date"
-    group_label: "Due.StandardMonth"
-    type: date
-    sql: ${TABLE}.`Due.Date`;;
-  }
-
-  dimension: StandardMonth_Due_Half_Year {
-    label: "    Due.Half Year"
-    group_label: "Due.StandardMonth"
-    type: string
-    sql: ${TABLE}.`Due.Half Year`;;
-    drill_fields: [StandardMonth_Due_Quarter]
+    drill_fields: [Retail445_Due_Reporting_Quarter]
   }
 
   dimension: StandardMonth_Due_Month {
@@ -1104,7 +1081,6 @@ view: ASAdventureSmall {
     group_label: "Due.StandardMonth"
     type: date_month
     sql: ${TABLE}.`Due.Month`;;
-    drill_fields: [StandardMonth_Due_Date]
   }
 
   dimension: StandardMonth_Due_Quarter {
@@ -1116,11 +1092,11 @@ view: ASAdventureSmall {
   }
 
   dimension: StandardMonth_Due_Year {
-    label: "     Due.Year"
+    label: "    Due.Year"
     group_label: "Due.StandardMonth"
     type: date_year
     sql: ${TABLE}.`Due.Year`;;
-    drill_fields: [StandardMonth_Due_Half_Year]
+    drill_fields: [StandardMonth_Due_Quarter]
   }
 
   dimension: StandardWeek_Due_Date {
@@ -1443,14 +1419,6 @@ view: ASAdventureSmall {
     sql: ${TABLE}.`Reporting Day`;;
   }
 
-  dimension: Retail445_Reporting_Half_Year {
-    label: "      Reporting Half Year"
-    group_label: "Retail445"
-    type: date_time
-    sql: ${TABLE}.`Reporting Half Year`;;
-    drill_fields: [Retail445_Reporting_Quarter]
-  }
-
   dimension: Retail445_Reporting_Month {
     label: "    Reporting Month"
     group_label: "Retail445"
@@ -1476,11 +1444,11 @@ view: ASAdventureSmall {
   }
 
   dimension: Retail445_Reporting_Year {
-    label: "       Reporting Year"
+    label: "      Reporting Year"
     group_label: "Retail445"
     type: date_year
     sql: ${TABLE}.`Reporting Year`;;
-    drill_fields: [Retail445_Reporting_Half_Year]
+    drill_fields: [Retail445_Reporting_Quarter]
   }
 
   dimension: Annual_Revenue {
@@ -1542,14 +1510,6 @@ view: ASAdventureSmall {
     sql: ${TABLE}.`Ship.Reporting Day`;;
   }
 
-  dimension: Retail445_Ship_Reporting_Half_Year {
-    label: "      Ship.Reporting Half Year"
-    group_label: "Ship.Retail445"
-    type: date_time
-    sql: ${TABLE}.`Ship.Reporting Half Year`;;
-    drill_fields: [Retail445_Ship_Reporting_Quarter]
-  }
-
   dimension: Retail445_Ship_Reporting_Month {
     label: "    Ship.Reporting Month"
     group_label: "Ship.Retail445"
@@ -1575,26 +1535,11 @@ view: ASAdventureSmall {
   }
 
   dimension: Retail445_Ship_Reporting_Year {
-    label: "       Ship.Reporting Year"
+    label: "      Ship.Reporting Year"
     group_label: "Ship.Retail445"
     type: date_year
     sql: ${TABLE}.`Ship.Reporting Year`;;
-    drill_fields: [Retail445_Ship_Reporting_Half_Year]
-  }
-
-  dimension: StandardMonth_Ship_Date {
-    label: " Ship.Date"
-    group_label: "Ship.StandardMonth"
-    type: date
-    sql: ${TABLE}.`Ship.Date`;;
-  }
-
-  dimension: StandardMonth_Ship_Half_Year {
-    label: "    Ship.Half Year"
-    group_label: "Ship.StandardMonth"
-    type: string
-    sql: ${TABLE}.`Ship.Half Year`;;
-    drill_fields: [StandardMonth_Ship_Quarter]
+    drill_fields: [Retail445_Ship_Reporting_Quarter]
   }
 
   dimension: StandardMonth_Ship_Month {
@@ -1602,7 +1547,6 @@ view: ASAdventureSmall {
     group_label: "Ship.StandardMonth"
     type: date_month
     sql: ${TABLE}.`Ship.Month`;;
-    drill_fields: [StandardMonth_Ship_Date]
   }
 
   dimension: StandardMonth_Ship_Quarter {
@@ -1614,11 +1558,11 @@ view: ASAdventureSmall {
   }
 
   dimension: StandardMonth_Ship_Year {
-    label: "     Ship.Year"
+    label: "    Ship.Year"
     group_label: "Ship.StandardMonth"
     type: date_year
     sql: ${TABLE}.`Ship.Year`;;
-    drill_fields: [StandardMonth_Ship_Half_Year]
+    drill_fields: [StandardMonth_Ship_Quarter]
   }
 
   dimension: StandardWeek_Ship_Date {
@@ -1644,27 +1588,11 @@ view: ASAdventureSmall {
     drill_fields: [StandardWeek_Ship_Week]
   }
 
-  dimension: StandardMonth_Date {
-    label: " Date"
-    group_label: "StandardMonth"
-    type: date
-    sql: ${TABLE}.`Date`;;
-  }
-
-  dimension: StandardMonth_Half_Year {
-    label: "    Half Year"
-    group_label: "StandardMonth"
-    type: string
-    sql: ${TABLE}.`Half Year`;;
-    drill_fields: [StandardMonth_Quarter]
-  }
-
   dimension: StandardMonth_Month {
     label: "  Month"
     group_label: "StandardMonth"
     type: date_month
     sql: ${TABLE}.`Month`;;
-    drill_fields: [StandardMonth_Date]
   }
 
   dimension: StandardMonth_Quarter {
@@ -1676,11 +1604,11 @@ view: ASAdventureSmall {
   }
 
   dimension: StandardMonth_Year {
-    label: "     Year"
+    label: "    Year"
     group_label: "StandardMonth"
     type: date_year
     sql: ${TABLE}.`Year`;;
-    drill_fields: [StandardMonth_Half_Year]
+    drill_fields: [StandardMonth_Quarter]
   }
 
   dimension: StandardWeek_Date {
@@ -1782,70 +1710,6 @@ view: ASAdventureSmall {
     label: "QTD-ISA"
     type: average
     sql: ${TABLE}.`QTD-ISA`;;
-  }
-
-  measure: DDTestAllMembersInYear_2 {
-    label: "DDTestAllMembersInYear"
-    group_label: "DDTest"
-    type: count_distinct
-    sql: ${TABLE}.`DDTestAllMembersInYear_2`;;
-  }
-
-  measure: DDTestGrandparentName {
-    label: "DDTestGrandparentName"
-    group_label: "DDTest"
-    type: average
-    sql: ${TABLE}.`DDTestGrandparentName`;;
-  }
-
-  measure: DDTestParentParentName {
-    label: "DDTestParentParentName"
-    group_label: "DDTest"
-    type: average
-    sql: ${TABLE}.`DDTestParentParentName`;;
-  }
-
-  measure: DDTestUnitPriceCount {
-    label: "DDTestUnitPriceCount"
-    group_label: "DDTest"
-    description: "PTD test"
-    type: count_distinct
-    sql: ${TABLE}.`DDTestUnitPriceCount`;;
-  }
-
-  measure: DDTestYTDCount {
-    label: "DDTestYTDCount"
-    group_label: "DDTest"
-    type: count_distinct
-    sql: ${TABLE}.`DDTestYTDCount`;;
-  }
-
-  measure: m_freight_sum {
-    label: "Freight"
-    group_label: "DDTest"
-    type: sum
-    sql: ${TABLE}.`m_freight_sum`;;
-  }
-
-  measure: m_taxamt_sum {
-    label: "TaxSum"
-    group_label: "DDTest"
-    type: sum
-    sql: ${TABLE}.`m_taxamt_sum`;;
-  }
-
-  measure: m_totalproductcost_sum {
-    label: "TotalProductCost"
-    group_label: "DDTest"
-    type: sum
-    sql: ${TABLE}.`m_totalproductcost_sum`;;
-  }
-
-  measure: m_unitprice_count {
-    label: "UnitPriceCount"
-    group_label: "DDTest"
-    type: sum
-    sql: ${TABLE}.`m_unitprice_count`;;
   }
 
   measure: Balance {
