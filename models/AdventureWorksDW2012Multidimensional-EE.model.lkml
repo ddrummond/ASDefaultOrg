@@ -13,7 +13,7 @@ connection: "bitool1"
 label: "AdventureWorksDW2012Multidimensional-EE"
 
 
-include: "/views/ASAdventureSmall.view.lkml"
+include: "/views/AdventureWorksDW2012Multidimensional-EE/ASAdventureSmall.view.lkml"
 
 
 explore: ASAdventureSmall {
